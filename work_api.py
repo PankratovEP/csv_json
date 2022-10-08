@@ -30,7 +30,7 @@ def artists():
     # достаем токен
     token = j["token"]
     headers = {"X-Xapp-Token": token}
-    with open('dataset_24476_4.txt', encoding='utf-8') as inp, open('otp.txt', 'w', encoding='utf-8')  as otp:
+    with open('dataset_24476_4.txt', encoding='utf-8') as inp, open('otp.txt', 'w', encoding='utf-8') as otp:
         dic = {}
         for iden in inp.readlines():
             r = requests.get(f"https://api.artsy.net/api/artists/{iden.strip()}", headers=headers)
